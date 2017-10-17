@@ -1,0 +1,2 @@
+#Fantasy Football Cheat Sheet App
+This is a fantasy football cheatsheet app designed for live fantasy drafts. Users can "mark out" players that have been chosen and "high light" players they choose. They can also hide positions by clicking the respective position buttons.
