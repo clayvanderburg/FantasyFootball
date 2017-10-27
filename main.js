@@ -1,4 +1,4 @@
-			$("a").removeAttr("href");
+			
 			
 			$('#search1').hideseek({
     			list: '.list1',

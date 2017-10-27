@@ -44,11 +44,11 @@
 		    <div class="row">
 		       
 		    	<div class="col-xs-12 rowpadsmall">
-		    		<ul class="list1">	
+		    		<ol class="list1">	
 				    	<?php foreach( $playersAll as $playersAll): ?>
 				    		<li class="listitem1"><?= $playersAll?></li>
 				    	<?php endforeach; ?>
-			    	</ul> 
+			    	</ol> 
 		    	</div>
 		    </div>		
 		</div>
