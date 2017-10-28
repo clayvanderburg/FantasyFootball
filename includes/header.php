@@ -34,7 +34,7 @@
 
   			<ul class="nav navbar-nav">
 			    <li class="nav-item">
-			      <a class="nav-link active" href="http://www.ffbcheatsheet.info/">Standard<span class="sr-only">(current)</span></a>
+			      <a class="nav-link" href="http://www.ffbcheatsheet.info/">Standard<span class="sr-only">(current)</span></a>
 			    </li>
 			    <li class="nav-item">
 			      <a class="nav-link" href="http://www.ffbcheatsheet.info/ppr.php">PPR</a>

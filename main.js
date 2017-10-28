@@ -74,6 +74,12 @@
 			 }
 				});
 
+				$(function(){
+   var url = window.location.href;
+   var page = url.substr(url.lastIndexOf('/')+1);
+   $('a[href*="'+page+'"], a[href*=index]').addClass('active');
+});
+
 
 
 
