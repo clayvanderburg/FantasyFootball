@@ -8,7 +8,7 @@
 	    <meta charset="utf-8">
 	    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	    <meta http-equiv="x-ua-compatible" content="ie=edge">
-
+			<link href="https://fonts.googleapis.com/css?family=Special+Elite" rel="stylesheet">
 	    <!-- Bootstrap CSS -->
 	    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.3/css/bootstrap.min.css" integrity="sha384-MIwDKRSSImVFAZCVLtU0LMDdON6KVCrZHyVQQj6e8wIEJkW4tvwqXrbMIya1vriY" crossorigin="anonymous">
 
@@ -24,7 +24,11 @@
         $('#instructionModal').modal('show');
     });
 	</script>
+		<header>
+			<h1 class="display-5">Fantasy Football Cheat Sheet</h1>
 
+		</br>
+		</header>
 		<nav class="navbar navbar-dark bg-inverse">
   		<!-- Navbar content -->
 
@@ -46,13 +50,9 @@
 			</ul>
 		</nav>
 
-		<header>
-			<h4 class="text-center"></br></h4>
-			<p></br> </p>
-		</br>
-		</header>
 
-		<?php 
+
+		 <?php
 			//link to Position Buttons
 			include('includes/buttons.php');
 		?>
