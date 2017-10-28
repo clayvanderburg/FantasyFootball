@@ -105,10 +105,10 @@
 				color:black;
 				margin-top: 2px !important;
 				text-align: left;
-				font-size: 75%;
+				font-weight: bold;
 				border-radius: 3px;
 				width: 100%;
-				padding:5px 0 5px 15px;
+				padding:10px 0 10px 15px;
 			}
 
 			.listitem2 {
@@ -120,7 +120,7 @@
 				font-size: 65%;
 				border-radius: 2px;
 				width: 100%;
-				padding:1px;
+				padding:5px 15px 5px 15px;
 			}
 
 			.listitem3 {
@@ -132,7 +132,7 @@
 				font-weight: bold;
 				border-radius: 3px;
 				width: 100%;
-				padding:5px 0 5px 15px;
+				padding:10px 0 10px 15px;
 				}
 
 
