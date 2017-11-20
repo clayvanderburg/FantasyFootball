@@ -12,31 +12,33 @@
     $playersAll = array_slice($pageArray1,1,330);
 
     $playersAll = str_replace(array('</ul></div><div class="four columns"><ul>','</li><li class="mpb-player-">'),array('',''), $playersAll);
-    
+
 ?>
 
 
-		
+
 
    		<div class="container-fluid" >
 		    <div class="row">
-		       
-		    
+
+
 
 		    	<div class="col-xs-12 rowpadsmall">
-		    		<ol class="list1">	
+		    		<ul id="parent-pprhalf" class="list1">
 				    	<?php foreach( $playersAll as $playersAll ): ?>
-				    		<li class="listitem1"><?= $playersAll ?></li>
+								<li class="listitem1 parent-pprhalf" draggable="true"><?= $playersAll?><span class="handle"><i class="fa fa-sort-asc" aria-hidden="true"></i>
+									<i class="fa fa-sort-desc" aria-hidden="true"></i></span>
+
 				    	<?php endforeach; ?>
-			    	</ol> 
+			    	</ul>
 		    	</div>
 
-				
+
 		</div>
 
-	   <?php 
+	   <?php
 
 			//link to footer
-			include('includes/footer.php'); 
+			include('includes/footer.php');
 
 		?>

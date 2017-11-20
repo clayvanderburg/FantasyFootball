@@ -1,88 +1,121 @@
+$('#search1').hideseek({
+    list: '.list1',
+  });
+  var addPostionClass = function(){
+  $("li:contains('WR')").addClass("receiver");
+  $("li:contains('RB')").addClass("rback");
+  $("li:contains('QB')").addClass("qback");
+  $("li:contains('TE-')").addClass("tend");
+  $("li:contains('DST')").addClass("dst");
+  $("li:contains('K-')").addClass("kicker");
+}
+
+if(document.getElementById('parent')){
+var theList = document.getElementById('parent');
+if(localStorage.getItem('parent')){
+theList.innerHTML = localStorage.getItem('parent');
+}
+}
+if(document.getElementById('parent-ppr')){
+var theListPpr = document.getElementById('parent-ppr');
+if(localStorage.getItem('parent-ppr')){
+theListPpr.innerHTML = localStorage.getItem('parent-ppr');
+}
+}
+if(document.getElementById('parent-pprhalf')){
+var theListHalfPpr = document.getElementById('parent-pprhalf');
+if(localStorage.getItem('parent-pprhalf')){
+theListHalfPpr.innerHTML = localStorage.getItem('parent-pprhalf');
+}
+}
+
+addPostionClass();
 
 
-			$('#search1').hideseek({
-    			list: '.list1',
-			});
+//Toggles classes of list items on click eventsf
+$(".listitem1").click(function(e) {
+  $(this).toggleClass('listitem2');
+});
+$(".listitem1").dblclick(function(f) {
+  $(this).toggleClass('listitem3');
+});
 
-			// $(':input').focusout(function() {
-			// 	this.value = "" ;
-			// 	$(':input').trigger({type: 'keypress', which: 8, keyCode: 8});
-			// });
+$(".quarterbackbt").click(function(g) {
+  //$("li:contains('QB'),li:contains('WR'),li:contains('RB'),li:contains('TE'),li:contains('DST'),li:contains('K')").removeClass("hiddenbt");
 
-	    	//Assigns player position class to the list item containing the string
-			$("li:contains('WR')").addClass("receiver");
-			$("li:contains('RB')").addClass("rback");
-			$("li:contains('QB')").addClass("qback");
-			$("li:contains('TE-')").addClass("tend");
-			$("li:contains('DST')").addClass("dst");
-			$("li:contains('K-')").addClass("kicker");
+  $("li:contains('QB')").toggleClass("hiddenbt");
+  $(".quarterbackbt").toggleClass("btshrink");
 
-			//Toggles classes of list items on click eventsf
-		    $(".listitem1").click(function(e){
-        	 $(this).toggleClass('listitem2');
-   		    });
-   		 	$(".listitem1").dblclick(function(f){
-        		$(this).toggleClass('listitem3');
-	   		});
+});
+$(".runningbackbt").click(function(g) {
+  $("li:contains('RB')").toggleClass("hiddenbt");
+  $(".runningbackbt").toggleClass("btshrink");
 
-	   		$(".quarterbackbt").click(function(g){
-	   						//$("li:contains('QB'),li:contains('WR'),li:contains('RB'),li:contains('TE'),li:contains('DST'),li:contains('K')").removeClass("hiddenbt");
+});
+$(".tightendbt").click(function(g) {
 
-	   			   			$("li:contains('QB')").toggleClass("hiddenbt");
-	   			   			$(".quarterbackbt").toggleClass("btshrink");
+  $("li:contains('TE-')").toggleClass("hiddenbt");
+  $(".tightendbt").toggleClass("btshrink");
+});
+$(".receiverbt").click(function(g) {
 
-	   			});
-	   		$(".runningbackbt").click(function(g){
-
-	   			   			$("li:contains('RB')").toggleClass("hiddenbt");
-	   			   			$(".runningbackbt").toggleClass("btshrink");
-
-	   			});
-	   		$(".tightendbt").click(function(g){
-
-	   			   			$("li:contains('TE-')").toggleClass("hiddenbt");
-	   			   			$(".tightendbt").toggleClass("btshrink");
-	   			});
-	   		$(".receiverbt").click(function(g){
-
-	   			   			$("li:contains('WR')").toggleClass("hiddenbt");
-	   			   			$(".receiverbt").toggleClass("btshrink");
-	   			});
-
-
-	   		$(".defensebt").click(function(g){
-
-	   			   			$("li:contains('DST')").toggleClass("hiddenbt");
-	   			   			$(".defensebt").toggleClass("btshrink");
-	   			});
-
-	   		$(".kickerbt").click(function(g){
-
-	   			   			$("li:contains('K-')").toggleClass("hiddenbt");
-	   			   			$(".kickerbt").toggleClass("btshrink");
-	   			});
-
-
-	   		var wrap = $("#wrap");
-
-			$(window).on("scroll", function() {
-
-			  if ($(window).scrollTop() > 125) {
-			    wrap.addClass("positionsbartop");
-			  } else {
-			    wrap.removeClass("positionsbartop");
-			 }
-				});
-
-				$(function(){
-   var url = window.location.href;
-   var page = url.substr(url.lastIndexOf('/')+1);
-   $('a[href*="'+page+'"], a[href*=index]').addClass('active');
+  $("li:contains('WR')").toggleClass("hiddenbt");
+  $(".receiverbt").toggleClass("btshrink");
 });
 
 
+$(".defensebt").click(function(g) {
+
+  $("li:contains('DST')").toggleClass("hiddenbt");
+  $(".defensebt").toggleClass("btshrink");
+});
+
+$(".kickerbt").click(function(g) {
+
+  $("li:contains('K-')").toggleClass("hiddenbt");
+  $(".kickerbt").toggleClass("btshrink");
+});
 
 
+var wrap = $("#wrap");
+
+$(window).on("scroll", function() {
+
+  if ($(window).scrollTop() > 125) {
+    wrap.addClass("positionsbartop");
+  } else {
+    wrap.removeClass("positionsbartop");
+  }
+});
+
+$(function() {
+  var url = window.location.href;
+  var page = url.substr(url.lastIndexOf('/') + 1);
+  $('a[href*="' + page + '"], a[href*=index]').addClass('active');
+});
 
 
-			//.css("cursor","pointer")
+  $("#parent").sortable({
+    axis:"y",
+    handle: '.handle',
+    update: function( ) {
+
+      localStorage.setItem('parent', theList.innerHTML);
+    }
+  });
+  $("#parent-ppr").sortable({
+    axis:"y",
+    handle: '.handle',
+    update: function( ) {
+
+      localStorage.setItem('parent-ppr', theListPpr.innerHTML);
+    }
+  });
+  $("#parent-pprhalf").sortable({
+    axis:"y",
+    handle: '.handle',
+    update: function( ) {
+
+      localStorage.setItem('parent-pprhalf', theListHalfPpr.innerHTML);
+    }
+  });

@@ -3,7 +3,18 @@
 				color:white;
 				background-color: black;
 			}
-
+			span{
+				float:right;
+				text-align:left !important;
+				width:50px;
+				margin:-5px auto;
+				padding: 0px;
+				font-size: .8em;
+			}
+			span i{
+				width:35px;
+				color:#212121;
+			}
 			header {
 					font-family: 'Special Elite', cursive;
           background-color: black;
@@ -38,6 +49,10 @@
 				}
 			.positionbts ul li {
 				display: inline;
+			}
+			.hiddenbt span, .hiddenbt span i{
+				display:none;
+				visibility: hidden ;
 			}
 			.buttonspos {
 				max-width: 100%;

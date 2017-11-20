@@ -11,9 +11,13 @@
 			<link href="https://fonts.googleapis.com/css?family=Special+Elite" rel="stylesheet">
 	    <!-- Bootstrap CSS -->
 	    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.3/css/bootstrap.min.css" integrity="sha384-MIwDKRSSImVFAZCVLtU0LMDdON6KVCrZHyVQQj6e8wIEJkW4tvwqXrbMIya1vriY" crossorigin="anonymous">
-
+		<script src="https://use.fontawesome.com/21c4de2e63.js"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 		<script type="text/javascript" src="jquery.hideseek.min.js"></script>
+		<script type="text/javascript" src="jqueryui/jquery-ui.min.js"></script>
+		<script type="text/javascript" src="jquery.ui.touch-punch.min.js"></script>
+
+		
 		<link rel="stylesheet" href="style.css">
 
 

@@ -23,7 +23,7 @@
 		  <div class="modal-dialog" role="document">
 		    <div class="modal-content">
 		      <div class="modal-header text-center">
-		        <h5 class="modal-title" id="exampleModalLabel">Welcom to FFBCheatSheet.info!</h5>
+		        <h5 class="modal-title" id="exampleModalLabel">Welcome to FFBCheatSheet.info!</h5>
 
 		      </div>
 		      <div class="modal-body text-center">
@@ -44,9 +44,12 @@
 		    <div class="row">
 
 		    	<div class="col-xs-12 rowpadsmall">
-		    		<ul class="list1">
+		    		<ul id="parent" class="list1">
 				    	<?php foreach( $playersAll as $playersAll): ?>
-				    		<li class="listitem1"><?= $playersAll?></li>
+				    		<li class="listitem1 parent" draggable="true"><?= $playersAll?><span class="handle"><i class="fa fa-sort-asc" aria-hidden="true"></i>
+									<i class="fa fa-sort-desc" aria-hidden="true"></i>
+
+</span></li>
 				    	<?php endforeach; ?>
 			    	</ul>
 		    	</div>
