@@ -18,7 +18,7 @@
 		      <div class="modal-body text-center">
 		        <p>This site is intended to be a replacement for a physical cheat sheet at live fantasy drafts.</p>
 		        <h5 class="modal-title" id="exampleModalLabel">Tips</h5><br>
-		        <p>Click once to dismiss a player</p>
+		        <p>Click once  to dismiss a player</p>
 		        <p>Click twice to highlight a player</p>
 		        <p>Click position buttons to hide position</p>
 		      </div>
